@@ -1,0 +1,27 @@
+<main class="container" >
+	<div class="row">
+		<div class="col-xs-12 align-center">
+			
+			<input type="text" placeholder="What shoud I do ?" ng-model="todo.name">
+			<button class="btn btn-primary" ng-click="addTodo()">Add todo</button>
+		</div>
+		<div class="col-xs-12 align-center">
+			
+			<table >
+				<thead>
+					<th> Task </th>
+					<th> Delete ? </th>
+					<th> Done ? </th>
+				<thead>
+				<tbody>
+					<tr ng-repeat="todo in todos">
+						<td class="col-xs-3" ng-class="{done: todo.done}"> <span> {{ todo.name }} </span> </td>
+						<td class="col-xs-3"> <button ng-click="deleteTodo(todo._id)"> <span class="glyphicon glyphicon-trash cur" aria-hidden="true" > </span> </button> </td>
+						<td class="col-xs-3"> <button ng-click="checkTodo(todo._id)" ng-if="!todo.done"> <span class="glyphicon glyphicon-check cur" aria-hidden="true" > </span> </button>  </td>
+					</tr>
+				</tbody>
+			</table>
+				
+		</div>
+	</div>
+</main>	

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TodoApp">
+	<head>
+		<title>Todo App</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="assets/css/todo-libs.css" />
+		<link rel="stylesheet" href="assets/css/todo-app.css" />
+		<link rel="icon" href="assets/img/favicon.png" />
+	</head>
+
+	<body>
+		<script src="assets/js/todo-libs.js"></script>
+		<script src="assets/js/todo-app.js"></script>
+		
+		<header ng-include="'components/template/header.html'" class="container"></header>
+		
+		<div ng-view></div>
+		
+		<footer ng-include="'components/template/footer.html'" class="container"> </footer>
+
+	</body>
+</html>
